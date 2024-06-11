@@ -1,0 +1,31 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        
+        
+        {
+            "name": "dose_diaria-9ed30",
+            "cwd": "dose_diaria",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "dose_diaria (profile mode)",
+            "cwd": "dose_diaria",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "dose_diaria (release mode)",
+            "cwd": "dose_diaria",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
