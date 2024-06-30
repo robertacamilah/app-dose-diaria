@@ -1,0 +1,12 @@
+flutter_native_splash: 
+  ios: true
+  android: true
+  color: "#F2B6C1"
+  
+  image: dose_diaria/assets/splash_logo.png
+
+  android_12: 
+    color: "#F2B6C1"
+    image: dose_diaria/assets/splash_logo.png
+
+  web: false  

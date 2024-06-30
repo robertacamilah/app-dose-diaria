@@ -1,4 +1,3 @@
-
 import 'package:dose_diaria/telas/telaBook.dart';
 import 'package:dose_diaria/telas/telaEmotion.dart';
 import 'package:dose_diaria/telas/telaPerson.dart';
@@ -25,8 +24,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        brightness: Brightness.light,
-        primaryColor: Colors.white,
+        //brightness: Brightness.light,
+        primaryColor: Color(0x283040).withOpacity(1.0),
       ),
       home: Scaffold(
         //navegacao entre telas
@@ -41,11 +40,14 @@ class _HomePageState extends State<HomePage> {
                       height: 400,
                       child: Card(
                         elevation: 20,
-                        color: Colors.grey.withOpacity(0.35),
+                        color: Color(0xf2b6c1).withOpacity(1.0),
                         //ainda tem que configurar as mensagens
-                        child: Text('Autocuidado',
+                        child: Text('Você consegue',
                             style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20),
+                                fontWeight: FontWeight.bold,
+                                height: 500,
+                                fontSize: 40,
+                                color: Color(0x283040).withOpacity(1.0)),
                             textAlign: TextAlign.center),
                       ))
                 ],
@@ -56,27 +58,29 @@ class _HomePageState extends State<HomePage> {
 
         //Menu de navegacao lateral, Drawer ou endDrawer
         drawer: Drawer(
-          backgroundColor: Colors.grey.shade400,
+          backgroundColor: Color(0x283040).withOpacity(1.0),
           child: Column(
             children: [
               //Configuracao do header
               UserAccountsDrawerHeader(
-                
 
                   //Image.asset('dose_diaria/assets/images/logo1.png',height: 128,)),
                   accountName: Text(
                     'Perfil',
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   accountEmail: Text('email@email.com')),
               ListTile(
-                leading: Icon(
-                  Icons.star,
-                  color: Colors.black,
-                ),
+                leading:
+                    Icon(Icons.star, color: Color(0xf2b6c1).withOpacity(1.0)),
                 title: Text(
                   'Favoritos',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                      color: Color(0xf2b6c1).withOpacity(1.0)),
                 ),
 
                 //subtitle: Text('Selecione a opcao de menu'),
@@ -84,11 +88,14 @@ class _HomePageState extends State<HomePage> {
               ListTile(
                 leading: Icon(
                   Icons.edit,
-                  color: Colors.black,
+                  color: Color(0xf2b6c1).withOpacity(1.0),
                 ),
                 title: Text(
                   'Curiosidades',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                      color: Color(0xf2b6c1).withOpacity(1.0)),
                 ),
 
                 //subtitle: Text('Selecione a opcao de menu'),
@@ -96,11 +103,14 @@ class _HomePageState extends State<HomePage> {
               ListTile(
                 leading: Icon(
                   Icons.calendar_month,
-                  color: Colors.black,
+                  color: Color(0xf2b6c1).withOpacity(1.0),
                 ),
                 title: Text(
                   'Calendário',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                      color: Color(0xf2b6c1).withOpacity(1.0)),
                 ),
 
                 //subtitle: Text('Selecione a opcap de menu'),
@@ -108,18 +118,24 @@ class _HomePageState extends State<HomePage> {
               ListTile(
                 leading: Icon(
                   Icons.location_on,
-                  color: Colors.black,
+                  color: Color(0xf2b6c1).withOpacity(1.0),
                 ),
                 title: Text(
                   'Localização',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                      color: Color(0xf2b6c1).withOpacity(1.0)),
                 ),
               ),
               ListTile(
-                leading: Icon(Icons.settings, color: Colors.black),
+                leading: Icon(Icons.settings,
+                    color: Color(0xf2b6c1).withOpacity(1.0)),
                 title: Text('Configurações',
-                    style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                        color: Color(0xf2b6c1).withOpacity(1.0))),
               ),
             ],
           ),
@@ -137,7 +153,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ), //Design dos widgets
         appBar: AppBar(
-          backgroundColor: Colors.purple.shade200,
+          backgroundColor: Color(0x203040).withOpacity(1.0),
           elevation: 30,
           //altura do appBar
           toolbarHeight: 180,
@@ -147,7 +163,10 @@ class _HomePageState extends State<HomePage> {
                   bottomLeft: Radius.elliptical(900, 150))),
           title: Text(
             'Dose diária',
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Color(0xf2b6c1).withOpacity(1.0),
+                fontSize: 30),
           ),
           centerTitle: true,
         ),
