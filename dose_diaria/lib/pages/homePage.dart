@@ -1,6 +1,7 @@
-import 'package:dose_diaria/telas/telaBook.dart';
-import 'package:dose_diaria/telas/telaEmotion.dart';
-import 'package:dose_diaria/telas/telaPerson.dart';
+import 'package:dose_diaria/pages/telaBook.dart';
+import 'package:dose_diaria/pages/telaEmotion.dart';
+import 'package:dose_diaria/pages/telaPerson.dart';
+import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 //import 'package:flutter/services.dart';
 
@@ -23,33 +24,50 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        //brightness: Brightness.light,
-        primaryColor: Color(0x283040).withOpacity(1.0),
-      ),
+      theme: ThemeData(primaryColor: Color(0xf2b6c1).withOpacity(1.0)),
       home: Scaffold(
         //navegacao entre telas
-        body: Center(
+        body: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.all(15.0),
+            padding: const EdgeInsets.all(35.0),
             child: Container(
               child: Stack(
                 children: [
-                  SizedBox(
-                      width: double.infinity,
-                      height: 400,
-                      child: Card(
-                        elevation: 20,
-                        color: Color(0xf2b6c1).withOpacity(1.0),
-                        //ainda tem que configurar as mensagens
-                        child: Text('Você consegue',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                height: 500,
-                                fontSize: 40,
-                                color: Color(0x283040).withOpacity(1.0)),
-                            textAlign: TextAlign.center),
-                      ))
+                  Material(
+                      elevation: 10.0,
+                      borderRadius: BorderRadius.circular(40.0),
+                      child: FlipCard(
+                        fill: Fill.fillBack,
+                        direction: FlipDirection.HORIZONTAL,
+                        side: CardSide.FRONT,
+                        front: Container(
+                            decoration: BoxDecoration(
+                                color: Color(0xf2b6c1).withOpacity(1.0),
+                                borderRadius: BorderRadius.circular(15.0)),
+                            child: Center(
+                              child: Text(
+                                'Acredite em você',
+                                style: TextStyle(
+                                    color: Color(0x283040).withOpacity(1.0),
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            )),
+                        back: Container(
+                            decoration: BoxDecoration(
+                              color: Color(0xf2b6c1).withOpacity(1.0),
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                            child: Center(
+                              child: Text(
+                                'Você Consegue',
+                                style: TextStyle(
+                                    color: Color(0x283040).withOpacity(1.0),
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            )),
+                      )),
                 ],
               ),
             ),
@@ -63,12 +81,26 @@ class _HomePageState extends State<HomePage> {
             children: [
               //Configuracao do header
               UserAccountsDrawerHeader(
-
-                  //Image.asset('dose_diaria/assets/images/logo1.png',height: 128,)),
+                  decoration: BoxDecoration(
+                    color: Color(0xf2b6c1).withOpacity(1.0),
+                  ),
+                  currentAccountPicture: Align(
+                      alignment:
+                          Alignment(11.5, 3.5), // Altera o alinhamento aqui
+                      child: CircleAvatar(
+                        backgroundColor: Color(0x283040).withOpacity(1.0),
+                        child: Text(
+                          "PF",
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                      )),
                   accountName: Text(
                     'Perfil',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
+                      color: Color(0x283040).withOpacity(1.0),
                     ),
                   ),
                   accountEmail: Text('email@email.com')),
@@ -141,9 +173,13 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         bottomNavigationBar: BottomNavigationBar(
+          selectedItemColor: Color(0x283040).withOpacity(1.0),
           onTap: _navigate,
           currentIndex: _itemSelecionado,
           type: BottomNavigationBarType.fixed,
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          elevation: 0,
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
             BottomNavigationBarItem(
@@ -153,6 +189,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ), //Design dos widgets
         appBar: AppBar(
+          iconTheme: IconThemeData(color: Color(0xf2b6c1).withOpacity(1.0)),
           backgroundColor: Color(0x203040).withOpacity(1.0),
           elevation: 30,
           //altura do appBar

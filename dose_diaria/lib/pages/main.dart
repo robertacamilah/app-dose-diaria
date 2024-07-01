@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'homepage.dart';
+import 'homePage.dart';
 import 'telaEmotion.dart';
 import 'telaEmotion.dart';
 import 'telaBook.dart';
@@ -8,6 +8,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'splashScreen.dart';
+import 'package:flip_card/flip_card.dart';
 
 void main() {
   runApp(const HomePage());
