@@ -14,9 +14,9 @@ Esse aplicativo também será como um diário para quem não consegue pagar um p
 
 
 # Como foi construido
-    O aplicativo está sendo construido usando a linguagem de programação Dart e o framework Flutter, a intenção de usar elas é  justamente por ser híbrido para criação atender a os dois sistemas operacionais. Android e IOS. 
+O aplicativo está sendo construido usando a linguagem de programação Dart e o framework Flutter, a intenção de usar elas é  justamente por ser híbrido para criação atender a os dois sistemas operacionais. Android e IOS. 
 
 
 
 ## Instrução de uso
-    É necessário usar emuladores, tanto o  X-Code para Macbooks e/o Android Studio.
+É necessário usar emuladores, tanto o  X-Code para Macbooks e/o Android Studio.
