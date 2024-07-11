@@ -9,9 +9,10 @@ import 'firebase_options.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'splashScreen.dart';
 import 'package:flip_card/flip_card.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
-  runApp(const HomePage());
+  runApp(const TelaEmotion());
 }
 
 class routes extends StatelessWidget {
